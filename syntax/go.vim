@@ -1,3 +1,7 @@
+" File   : go.vim
+" License: MIT/X11
+" Author : Dries Pauwels <2mjolk@gmail.com>
+" Date   : wo 16 jan 2019 04:04
 " Copyright 2009 The Go Authors. All rights reserved.
 " Use of this source code is governed by a BSD-style
 " license that can be found in the LICENSE file.
@@ -296,7 +300,8 @@ hi def link     goFunction          Function
 if go#config#HighlightFunctionCalls()
   syn match goFunctionCall      /\w\+\ze(/ contains=goBuiltins,goDeclaration
 endif
-hi def link     goFunctionCall      Type
+hi def link     goFunctionCall      Function
+hi def link     goMethodCall        Function
 
 " Fields;
 if go#config#HighlightFields()
